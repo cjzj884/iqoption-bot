@@ -126,7 +126,7 @@ python rethinkdb.py -a EURUSD -i 5
 - Optimize training with error function
 - Create backtest to improve tests
 - Use clean code to improve code
-- [analise backtrader](https://www.backtrader.com/)
+- [Analyze backtrader](https://www.backtrader.com/)
 - Add function to load trained model
 - create public database to store historical data( It will need donation to server manteinance )
 - Create pipeline to deploy in a server
