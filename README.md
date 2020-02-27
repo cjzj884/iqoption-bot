@@ -127,6 +127,7 @@ python rethinkdb.py -a EURUSD -i 5
   - [prophet](https://facebook.github.io/prophet/docs/quick_start.html)
   - [xgboost](https://pt.wikipedia.org/wiki/Xgboost)
 - Optimize training with error function
+- try implement trailing stop
 - Create backtest to improve tests
 - Use clean code to improve code
 - Add more models and very tendency of major (exemple: add 5 models and if 3 says to buy then it is buy)
@@ -135,6 +136,18 @@ python rethinkdb.py -a EURUSD -i 5
 - create public database to store historical data( It will need donation to server manteinance )
 - Create pipeline to deploy in a server
 - unit tests
+
+<div id='strategies'/>
+
+## Strategies
+
+You must implement some of those strategies:
+- Martingale
+- trailing stop
+
+Notes:
+Take Smaller Position Sizes to Give You More Wiggle Room
+
 
 <div id='tipsStrategy'/>
 
