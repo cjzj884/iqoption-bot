@@ -119,13 +119,17 @@ python rethinkdb.py -a EURUSD -i 5
 ## TODO
 
 - Graphical interface web or desktop
+- test [pickle](https://docs.python.org/3/library/pickle.html) to load file instead csv 
 - Test other models
   - logistic regression with lbfgs
   - test different parameter to SVC
   - way to classify moviments
+  - [prophet](https://facebook.github.io/prophet/docs/quick_start.html)
+  - [xgboost](https://pt.wikipedia.org/wiki/Xgboost)
 - Optimize training with error function
 - Create backtest to improve tests
 - Use clean code to improve code
+- Add more models and very tendency of major (exemple: add 5 models and if 3 says to buy then it is buy)
 - [Analyze backtrader](https://www.backtrader.com/)
 - Add function to load trained model
 - create public database to store historical data( It will need donation to server manteinance )
