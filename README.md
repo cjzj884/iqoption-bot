@@ -22,10 +22,12 @@ NOTE:
 
 - [Contribute with Community](#contribe)
 - [PYTHON VERSION 3.7](#pythonversion)
+- [How it works](#howitworks)
 - [How to start](#howtostart)
 - [discover for assets](#discoverassets)
 - [Save in database](#database)
 - [TODO](#todo)
+- [STRATEGIES](#strategies)
 - [TIPS AND STRATEGY](#tipsStrategy)
 - [SUPPORT PROJECT](#support)
 
@@ -45,6 +47,13 @@ Please send me suggestions ... feedbacks are welcome
 ### PYTHON VERSION
 
 I'm using anaconda with python 3.7
+
+<div id='howitworks'/>
+
+## How it Works
+
+Based on what I understood of saulo's code. it gets ask and bid value store it on a csv file, calculate [spread](https://www.investopedia.com/terms/s/spread.asp) and [boillinger bands](https://www.investopedia.com/terms/b/bollingerbands.asp)
+and when ask and bid baselines crossover/crossdown boillinger it emits an action to buy/sell asset
 
 <div id='howtostart'/>
 
