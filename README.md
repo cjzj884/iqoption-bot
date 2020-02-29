@@ -128,7 +128,7 @@ python rethinkdb.py -a EURUSD -i 5
 ## TODO
 
 - Graphical interface web or desktop
-- test [pickle](https://docs.python.org/3/library/pickle.html) to load file instead csv 
+- test [pickle](https://docs.python.org/3/library/pickle.html) to load file instead csv
 - Test other models
   - logistic regression with lbfgs
   - test different parameter to SVC
@@ -152,13 +152,13 @@ python rethinkdb.py -a EURUSD -i 5
 ## Strategies
 
 You must implement some of those strategies:
+
 - Martingale
 - trailing stop
-- Soros 
+- Soros
 
 Notes:
 Take Smaller Position Sizes to Give You More Wiggle Room
-
 
 <div id='tipsStrategy'/>
 
