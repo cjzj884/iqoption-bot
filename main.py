@@ -6,7 +6,7 @@ import os
 import numpy as np
 from argparse import ArgumentParser
 from sklearn.linear_model import LogisticRegression
-from sklearn.externals import joblib
+import joblib
 from threading import Thread
 from sklearn.ensemble import BaggingClassifier
 from iqoptionapi.stable_api import IQ_Option
@@ -253,7 +253,7 @@ def main():
         ax.text(len(ask) + 10, bid[-1:] + (diferenca/2), "Spread " + str(np.around(float(porcentagem),3)) + "%")
 
 
-        plt.title("TRAINNING - " + goal + " - " + interval)
+        plt.title("TRAINNING - " + goal + " - " + str(interval))
 
         if len(bid) < window:
             ax.set_xlim(0, len(bid)+(len(bid)/4)+5)
