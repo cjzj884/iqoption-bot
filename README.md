@@ -145,6 +145,7 @@ python rethinkdb.py -a EURUSD -i 5
 - create public database to store historical data( It will need donation to server manteinance )
 - Create pipeline to deploy in a server
 - unit tests
+- Candle patterns [pt-BR](https://www.youtube.com/watch?reload=9&v=MpW6GGHUguw)
 
 <div id='strategies'/>
 
@@ -153,6 +154,7 @@ python rethinkdb.py -a EURUSD -i 5
 You must implement some of those strategies:
 - Martingale
 - trailing stop
+- Soros 
 
 Notes:
 Take Smaller Position Sizes to Give You More Wiggle Room
