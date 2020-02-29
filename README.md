@@ -2,6 +2,8 @@
 
 ![vendabaixo](docs/iqobot.png)
 
+Discord server to discuss about iqoption bot [here](https://discord.gg/59Gdg6)
+
 iqoption bot is a simple ml realtime in training using LogisticRegression
 
 it use bollinger bands to determinate if buy or sell
