@@ -7,5 +7,5 @@ pytz==2018.5
 aenum==2.1.2
 yahoo-finance-pynterface==1.0.4
 matplotlib==3.0.3
-sklearn==0.20.3
-talib==0.4.17
+scikit-learn==0.21.2
+joblib==0.14.1
