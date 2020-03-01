@@ -48,11 +48,11 @@ lgr = LogisticRegression(random_state=0	, solver='lbfgs',multi_class='auto', max
 bagging = BaggingClassifier(lgr, max_samples=0.5, max_features=0.5)
 ## SETUP PARAMS
 
-window = 360             # window Dimension for calculation of indicators
-variance = 3.5             # Indicators window variance dimension
-batch_size = 360         # Lot Memory Dimension to train the model ( features - X )
+window = 600             # window Dimension for calculation of indicators
+variance = 2.7             # Indicators window variance dimension
+batch_size = 600         # Lot Memory Dimension to train the model ( features - X )
 interval = args.interval # Interval between ticker queries on the server
-dim = 360                # window Dimension for displaying the indicators
+dim = 600                # window Dimension for displaying the indicators
 
 ## ---------------------------------
 
@@ -357,17 +357,20 @@ def main():
         sleepFor = 5
         if interval is not None:
             sleepFor = int(interval)
-        plt.pause(sleepFor)
+        plt.gcf().canvas.draw_idle()
+        plt.gcf().canvas.start_event_loop(sleepFor)
+        # plt.pause(sleepFor)
 
 
 volta = 1
 
 def save(lgr,epoch,X0,y):
     bagging.fit(X0,y)
-    joblib.dump(bagging, "models/model-"+str(epoch)+".pkl", compress=3)
+    joblib.dump(bagging, "models/model-"+str(epoch)+"-epoch-" +str(epoch)+".pkl", compress=3)
     # print("--*--* saved Model - model-"+str(epoch)+".pkl")
 
 
+plt.show(block=False)
 while True:
     print("--------------------------- ")
     print("Lances = ", bets)
