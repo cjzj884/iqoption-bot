@@ -6,7 +6,7 @@ from iqoptionapi.stable_api import IQ_Option
 from argparse import ArgumentParser
 import pandas as pd
 import userdata
-import pyrenko
+from lib import pyrenko
 import traceback
 import time
 import matplotlib.pyplot as plt
