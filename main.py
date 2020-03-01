@@ -365,8 +365,11 @@ def main():
 volta = 1
 
 def save(lgr,epoch,X0,y):
+    modelName = 5 # 5 seconds
+	if interval is not None:
+		modelName=int(interval)
     bagging.fit(X0,y)
-    joblib.dump(bagging, "models/model-"+str(epoch)+"-epoch-" +str(epoch)+".pkl", compress=3)
+    joblib.dump(bagging, "models/model-"+str(modelName)+"-epoch-" +str(epoch)+".pkl", compress=3)
     # print("--*--* saved Model - model-"+str(epoch)+".pkl")
 
 
