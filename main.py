@@ -48,11 +48,11 @@ lgr = LogisticRegression(random_state=0	, solver='lbfgs',multi_class='auto', max
 bagging = BaggingClassifier(lgr, max_samples=0.5, max_features=0.5)
 ## SETUP PARAMS
 
-window = 600             # window Dimension for calculation of indicators
+window = 360             # window Dimension for calculation of indicators
 variance = 2.7             # Indicators window variance dimension
-batch_size = 600         # Lot Memory Dimension to train the model ( features - X )
+batch_size = 360         # Lot Memory Dimension to train the model ( features - X )
 interval = args.interval # Interval between ticker queries on the server
-dim = 600                # window Dimension for displaying the indicators
+dim = 360                # window Dimension for displaying the indicators
 
 ## ---------------------------------
 
@@ -376,7 +376,7 @@ def save(lgr,epoch,X0,y):
 plt.show(block=False)
 while True:
     print("--------------------------- ")
-    print("Lances = ", bets)
+    print("Bets = ", bets)
     print("Tickers - ", volta)
     volta += 1
     try:
