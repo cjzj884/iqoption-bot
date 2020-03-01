@@ -89,6 +89,8 @@ python main.py -a USDJPY -i 15 -f '-015'
 
 You can also use renko to better analyse tendence
 
+<b>IMPORTANT:</b> you need to Install [talib](https://github.com/mrjbq7/ta-lib) in order to renko lib works
+
 ```
 python historicalrenko.py -a USDJPY -i 15
 
