@@ -71,7 +71,7 @@ pip install -U git+git://github.com/Lu-Yi-Hsun/iqoptionapi.git
 
 ```
 
-rename userdata-sample.py to userdata.py
+#### IMPORTANT: rename userdata-sample.py to userdata.py
 
 than:
 
@@ -101,6 +101,14 @@ python streamrenko.py -a USDJPY -i 15
 chart examples
 
 ![vendabaixo](https://i.imgur.com/dm4WxCs.png)
+
+Tests with otc
+
+![otc](https://i.imgur.com/o4YHece.png)
+
+final result
+
+![result](https://i.imgur.com/ga0kODa.png)
 
 <div id='discoverassets'/>
 
