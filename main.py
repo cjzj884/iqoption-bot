@@ -369,7 +369,8 @@ def save(lgr,epoch,X0,y):
     if interval is not None:
         modelInterval=int(interval)
     bagging.fit(X0,y)
-    joblib.dump(bagging, "models/model-"+str(goal)+"-"+str(modelInterval)+"-epoch-" +str(epoch)+".pkl", compress=3)
+    modelFile = os.path.join('./models', "model-"+str(goal)+"-"+str(modelInterval)+"-epoch-" +str(epoch)+".pkl")
+    joblib.dump(bagging, modelFile, compress=3)
     # print("--*--* saved Model - model-"+str(epoch)+".pkl")
 
 
