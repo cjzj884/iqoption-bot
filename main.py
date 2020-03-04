@@ -222,7 +222,7 @@ def get_tickers():
 			record.write(str(bid)+","+str(ask)+'\n')
 			record.close()
 
-def new_binary_order(duration, amount, action)
+def new_binary_order(duration, amount, action):
     order_id=Iq.buy(amount,goal,action,duration)
     while Iq.get_async_order(order_id)==None:
         pass
@@ -231,7 +231,7 @@ def new_binary_order(duration, amount, action)
     print(Iq.get_async_order(order_id))
     print("\n\n\n\n")
 
-def new_forex_order(instrument_type = "forex", order_type = "buy" , amount = 1, leverage = 200, type="market")
+def new_forex_order(instrument_type = "forex", order_type = "buy" , amount = 1, leverage = 200, type="market"):
     instrument_id= goal
     limit_price=None
     stop_price=None
