@@ -1,4 +1,4 @@
-websocket-client==0.47.0
+websocket-client==0.56
 PyHamcrest==1.9.0
 pylint>=2.1.1
 autopep8>=1.4.3
@@ -9,3 +9,4 @@ yahoo-finance-pynterface==1.0.4
 matplotlib==3.0.3
 scikit-learn==0.21.2
 joblib==0.14.1
+-e git+git://github.com/Lu-Yi-Hsun/iqoptionapi.git#egg=iqoptionapi
