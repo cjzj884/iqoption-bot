@@ -222,6 +222,40 @@ def get_tickers():
 			record.write(str(bid)+","+str(ask)+'\n')
 			record.close()
 
+def new_binary_order(duration, amount, action)
+    order_id=Iq.buy(amount,goal,action,duration)
+    while Iq.get_async_order(order_id)==None:
+        pass
+    print("\n\n\n\n")
+    print("Order type: "+ action + " id: " + order_id)
+    print(Iq.get_async_order(order_id))
+    print("\n\n\n\n")
+
+def new_forex_order(instrument_type = "forex", order_type = "buy" , amount = 1, leverage = 200, type="market")
+    instrument_id= goal
+    limit_price=None
+    stop_price=None
+    stop_lose_kind="percent"
+    stop_lose_value=10
+    take_profit_kind="percent"
+    take_profit_value=12
+    use_trail_stop=True
+    auto_margin_call=False
+    use_token_for_commission=False
+    check,order_id=Iq.buy_order(instrument_type=instrument_type, instrument_id=instrument_id,
+            side=order_type, amount=amount,leverage=leverage,
+            type=type,limit_price=limit_price, stop_price=stop_price,
+            stop_lose_value=stop_lose_value, stop_lose_kind=stop_lose_kind,
+            take_profit_value=take_profit_value, take_profit_kind=take_profit_kind,
+            use_trail_stop=use_trail_stop, auto_margin_call=auto_margin_call,
+            use_token_for_commission=use_token_for_commission)
+    while Iq.get_async_order(order_id)==None:
+        pass
+    order_data=Iq.get_async_order(order_id)
+    print("\n\n\n\n")
+    print("Order type: "+ action + " id: " + order_id)
+    print(Iq.get_async_order(order_id))
+    print("\n\n\n\n")
 
 def ema(values, period):
     """ Numpy implementation of EMA
@@ -298,6 +332,7 @@ def main():
                             buys[ind] = float(ask[-1:])
                             X_temp[ind] = batch[-batch_size:]
                             # print("--**--** BUY - ", str(float( buys[ind])))
+                            new_forex_order("forex", "buy" , 1, 200, "market")
                             bets += 1
 
                         elif history[ind] == "BUY":
@@ -317,6 +352,7 @@ def main():
                         bets += 1
                         profit = float(float(sells[ind]) - float(buys[ind]))
                         # print("--**--** SELL ", str(float( sells[ind]))," - Lucro = US$ ", str(profit))
+                        new_forex_order("forex", "sell" , 1, 200, "market")
                         if profit > 0:
                             try:
                                 X.append(X_temp[ind])
