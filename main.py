@@ -49,7 +49,7 @@ bagging = BaggingClassifier(lgr, max_samples=0.5, max_features=0.5)
 ## SETUP PARAMS
 
 window = 900             # window Dimension for calculation of indicators
-variance = 3.2             # Indicators window variance dimension
+variance = 2.5             # Indicators window variance dimension
 batch_size = 900         # Lot Memory Dimension to train the model ( features - X )
 interval = args.interval # Interval between ticker queries on the server
 dim = 900                # window Dimension for displaying the indicators
@@ -227,7 +227,7 @@ def new_binary_order(duration, amount, action):
     while Iq.get_async_order(order_id)==None:
         pass
     print("\n\n\n\n")
-    print("Order type: "+ action + " id: " + order_id)
+    print("Order type: "+ action + " id: " + str(order_id))
     print(Iq.get_async_order(order_id))
     print("\n\n\n\n")
 
@@ -253,7 +253,7 @@ def new_forex_order(instrument_type = "forex", order_type = "buy" , amount = 1, 
         pass
     order_data=Iq.get_async_order(order_id)
     print("\n\n\n\n")
-    print("Order type: "+ action + " id: " + order_id)
+    print("Order type: "+ order_type + " id: " + str(order_id))
     print(Iq.get_async_order(order_id))
     print("\n\n\n\n")
 
